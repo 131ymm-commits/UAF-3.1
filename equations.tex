@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\section{Основные уравнения UAF}
+
+\subsection{Динамика когерентности уровня $l$}
+\[
+\frac{\partial \Gamma_l}{\partial \tau} = \eta_l \left( \sum_{k<l} \Phi_{k\to l} \mathcal{E}_{k,l} \right) (1-\alpha_l)^2 
+- \lambda_l \Delta S_{env,l} \alpha_l \Gamma_l
+\]
+
+\subsection{Динамика интеграции}
+\[
+\frac{\partial \alpha_l}{\partial \tau} = \kappa_l \alpha_l (1-\alpha_l)(E_l - c_l) - \delta_l(1-\alpha_l)\Gamma_l^2 
++ \mu_l \sum_{k<l} \mathcal{E}_{k,l}(\Gamma_k - \Gamma_l)
+\]
+
+\subsection{Закон сохранения полного времени}
+\[
+t_{past} + t_{self} + t_{future} = \text{const}
+\]
+
+\subsection{Вероятность туннелирования в UAF-Q}
+\[
+P_{\text{tunnel}}(\tau) = \Gamma_0(\tau)^2 \exp\left(-\int_0^\tau \alpha_1(s)(1-\Gamma_0(s))\,ds\right)
+\]
+
+\subsection{Пример калибровки (muon-catalyzed fusion)}
+\[
+\text{Среднее число реакций на мюон} = \eta \cdot (1-\alpha)^2 - \lambda \alpha \approx 150
+\]
+
+\end{document}
